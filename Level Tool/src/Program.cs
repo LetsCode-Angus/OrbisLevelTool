@@ -12,12 +12,10 @@ namespace Level_Tool
         static string WD = Directory.GetCurrentDirectory() + Path.DirectorySeparatorChar;
 
         static Dictionary<string, Action> MODES = new Dictionary<string, Action> {
-            { "1. Create a level", CreateLevel },
-            { "2. Edit a level", EditLevel},
-            { "3. Extract a level", ExtractLevel}
+            { "0. Create a level", CreateLevel },
+            { "1. Edit a level", EditLevel},
+            { "2. Extract a level", ExtractLevel}
         };
-
-        static string[] difficulty = new string[] { "0 = Easy", "1 = Medium", "2 = Hard", "3 = Extreme" };
 
         static void Main(string[] args)
         { 
@@ -27,7 +25,7 @@ namespace Level_Tool
 
                 try {
                     int index = int.Parse(Print.Prompt(keys, "Enter a number:"));
-                    MODES[keys[index - 1]].Invoke();
+                    MODES[keys[index]].Invoke();
                 }
                 catch (Exception) {
                     Print.Log("Please enter a valid input");
@@ -37,6 +35,8 @@ namespace Level_Tool
             }
         }
 
+        static string[] difficultylevel = new string[] { "0 = Easy", "1 = Medium", "2 = Hard", "3 = Extreme" };
+
         static void CreateLevel()
         {
             Print.Reset();
@@ -44,7 +44,7 @@ namespace Level_Tool
             LevelAssetBINARY level = new LevelAssetBINARY
             {
                 name = Print.Prompt("Level name:"),
-                difficulty = int.Parse(Print.Prompt(difficulty, "Enter a number:"))
+                difficulty = int.Parse(Print.Prompt(difficultylevel, "Enter a number:"))
             };
 
             string PATH = WD + "/Textures/" + Print.Prompt("Name of image (include the file extension):");
@@ -65,7 +65,7 @@ namespace Level_Tool
             }
 
             if (Print.YesOrNo("Change level difficulty?")) {
-                level.difficulty = int.Parse(Print.Prompt(difficulty, "Enter a number:"));
+                level.difficulty = int.Parse(Print.Prompt(difficultylevel, "Enter a number:"));
             }
 
             if (Print.YesOrNo("Change level map?")) {
