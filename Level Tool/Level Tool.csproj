@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{89CBD809-9DFB-40D1-A8FD-887E4CA3FAFC}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Level_Tool</RootNamespace>
+    <RootNamespace>Orbis</RootNamespace>
     <AssemblyName>Level Tool</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

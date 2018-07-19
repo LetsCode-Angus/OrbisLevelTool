@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Level_Tool
+namespace LevelTooling
 {
     [Serializable]
     public class LevelAssetBINARY
