@@ -45,9 +45,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="src\lib\LevelFactory.cs" />
-    <Compile Include="src\lib\LevelAsset.cs" />
-    <Compile Include="src\Program.cs" />
+    <Compile Include="LevelTools\Binary\Binary.cs" />
+    <Compile Include="LevelTools\Binary\BinarySerializer.cs" />
+    <Compile Include="LevelTools\LevelFactory.cs" />
+    <Compile Include="LevelTools\LevelAsset.cs" />
+    <Compile Include="LevelTools\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -57,7 +59,7 @@
     <Content Include="manifest\Icon.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="src\bin\" />
+    <Folder Include="LevelTools\bin\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
