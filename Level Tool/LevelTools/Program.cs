@@ -1,16 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.IO;
-using LevelTooling;
+using Orbis.LevelTools;
 
 class Program
 {
     static string WD = Directory.GetCurrentDirectory() + Path.DirectorySeparatorChar;
 
-    static Dictionary<string, Action> MODES = new Dictionary<string, Action> {
+    static Dictionary<string, Action> MODES = new Dictionary<string, Action>() {
             { "0. Create a level", CreateLevel },
             { "1. Edit a level", EditLevel},
             { "2. Extract a level", ExtractLevel}

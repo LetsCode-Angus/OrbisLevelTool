@@ -1,7 +1,8 @@
 ﻿using System.IO;
 using System.Xml.Serialization;
+using Orbis.LevelTools;
 
-namespace LevelTooling
+namespace Orbis.LevelTools
 {
     public static class LevelFactory
     {
