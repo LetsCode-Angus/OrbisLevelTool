@@ -10,6 +10,9 @@ namespace Orbis.LevelTools
         public string name;
         [XmlElement("Level Difficulty")]
         public int difficulty;
+        public string PublicKey;
+        public string PrivateKey;
+        public string Savekey;
         [XmlElement("map data")]
         public byte[] image;
     }

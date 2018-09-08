@@ -41,7 +41,10 @@ class Program
         LevelAssetBINARY level = new LevelAssetBINARY
         {
             name = Print.Prompt("Level name:"),
-            difficulty = int.Parse(Print.Prompt(difficultylevel, "Enter a number:"))
+            difficulty = int.Parse(Print.Prompt(difficultylevel, "Enter a number:")),
+            PublicKey = Print.Prompt("Public Key: "),
+            PrivateKey = Print.Prompt("Private Key: "),
+            Savekey = Print.Prompt("Save Key: ")
         };
 
         string PATH = WD + "/Textures/" + Print.Prompt("Name of image (include the file extension):");
